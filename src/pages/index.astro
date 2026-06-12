@@ -1,0 +1,302 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <title>omJob match | 探す時間を減らし、向き合う時間を増やす。</title>
+    <meta
+      name="description"
+      content="omJob matchは、CRMに蓄積された候補者・求人データを整理し、CAの求人提案業務を支援するAIエージェントです。"
+    >
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="logo-link" href="#top" aria-label="omJob match トップへ">
+        <img src="/assets/omjob-logo.png" alt="omJob match" width="168" height="106">
+      </a>
+      <nav class="desktop-nav" aria-label="主要ナビゲーション">
+        <a href="#problem">課題</a>
+        <a href="#features">できること</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-download" href="#cta" data-intent-link="download">資料ダウンロード</a>
+        <a class="button button-consult" href="#cta" data-intent-link="consult">相談してみる</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション" data-mobile-nav>
+      <a href="#problem">課題</a>
+      <a href="#features">できること</a>
+      <a href="#cta" data-intent-link="download">サービス資料をダウンロード</a>
+      <a href="#cta" data-intent-link="consult">相談してみる</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">CAの求人提案業務を支援するAIエージェント</p>
+          <h1><span class="headline-line">探す時間を減らし、</span><span class="headline-line">向き合う時間を増やす。</span></h1>
+          <p class="hero-lead">
+            omJob matchは、CRMに蓄積された候補者・求人データを整理し、CAが迷わず求人提案に進める状態をつくるAIエージェントです。提案準備の属人化を減らし、組織として提案品質を高めます。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-download" href="#cta" data-intent-link="download">資料ダウンロード</a>
+            <a class="button button-demo" href="#top">60秒デモを見る</a>
+          </div>
+        </div>
+
+        <div class="video-shell" aria-label="omJob match デモ動画プレースホルダー">
+          <div class="video-frame">
+            <div class="product-mock">
+              <div class="mock-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+                <strong>omJob match デモ</strong>
+              </div>
+              <div class="mock-body">
+                <aside class="mock-sidebar">
+                  <div class="mock-chip active">データ整理</div>
+                  <div class="mock-chip">候補者</div>
+                  <div class="mock-chip">求人</div>
+                  <div class="mock-chip">提案メモ</div>
+                </aside>
+                <div class="mock-flow">
+                  <div class="mock-source candidate">
+                    <span>CRM / CSV</span>
+                    <strong>面談メモ・希望条件</strong>
+                  </div>
+                  <div class="mock-source job">
+                    <span>求人データ</span>
+                    <strong>要件・魅力・注意点</strong>
+                  </div>
+                  <div class="mock-arrow">整理</div>
+                  <div class="mock-result">
+                    <span>omJob match</span>
+                    <strong>提案に使える形へ整理</strong>
+                    <ul>
+                      <li>候補者情報を要約</li>
+                      <li>求人情報を比較</li>
+                      <li>提案理由を準備</li>
+                    </ul>
+                  </div>
+                  <div class="mock-ready">
+                    <span>提案準備</span>
+                    <strong>CAがすぐ使える状態に</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="play-button" type="button" aria-label="デモ動画を再生" data-demo-button>
+              <span></span>
+            </button>
+          </div>
+          <p class="video-caption" data-demo-status>CRM/CSVデータを整理し、候補者情報・求人情報を提案に使える状態へ整えます。</p>
+        </div>
+      </section>
+
+      <section class="section problem" id="problem" aria-labelledby="problem-title">
+        <div class="section-heading">
+          <p class="eyebrow">Problem</p>
+          <h2 id="problem-title">求職者に向き合う時間が、<span class="accent-text">提案準備に奪われて</span>いませんか？</h2>
+        </div>
+        <div class="problem-grid">
+          <article>
+            <h3>候補者の情報を探すのに時間がかかる</h3>
+            <p>面談メモや希望条件が分かれていて、提案前の確認に手間がかかる。</p>
+          </article>
+          <article>
+            <h3>合う求人を探す力が、人によって変わる</h3>
+            <p>担当CAの経験や記憶に頼るため、提案品質にばらつきが出やすくなる。</p>
+          </article>
+          <article>
+            <h3>うまくいく提案方法を共有しにくい</h3>
+            <p>選定理由や進め方が見えづらく、新人CAの育成や業務改善につなげにくい。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section features" id="features" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow">Features</p>
+          <h2 id="features-title">omJob matchでできること</h2>
+          <p>
+            omJob matchは、候補者情報と求人情報を整理し、CAが提案に進みやすい状態をつくります。
+          </p>
+        </div>
+        <div class="feature-showcase">
+          <article class="feature-row">
+            <div class="feature-copy">
+              <h3>候補者情報を、<span>提案に使いやすく</span>整理</h3>
+              <p>面談メモ、希望条件、経験スキルなどをまとめて確認できるため、候補者理解に必要な情報を探しやすくなります。</p>
+            </div>
+            <div class="screen-card" aria-label="候補者一覧・候補者詳細の画面イメージ">
+              <div class="app-screen candidate-screen">
+                <div class="screen-topbar"><strong>候補者</strong><span>検索</span><span>条件</span></div>
+                <div class="screen-layout">
+                  <aside>
+                    <b>候補者一覧</b>
+                    <p class="is-active">佐藤 亜美</p>
+                    <p>田中 健太</p>
+                    <p>山本 美咲</p>
+                    <p>鈴木 亮</p>
+                  </aside>
+                  <section>
+                    <div class="profile-head">
+                      <div><strong>佐藤 亜美</strong><small>営業企画 / 年収500万円希望</small></div>
+                      <span>提案準備中</span>
+                    </div>
+                    <div class="info-grid">
+                      <div><b>希望条件</b><p>東京 / リモート可 / 事業会社</p></div>
+                      <div><b>経験スキル</b><p>SaaS営業、CS、業務改善</p></div>
+                      <div><b>面談メモ</b><p>成長環境と裁量を重視。選考前に業務内容を丁寧に確認したい。</p></div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-row feature-row-reverse">
+            <div class="feature-copy">
+              <h3>求人情報を、<span>比較しやすい形</span>で確認</h3>
+              <p>職種、勤務地、必須条件、歓迎条件などの求人情報を整理し、候補者に合う求人を検討しやすくします。</p>
+            </div>
+            <div class="screen-card" aria-label="求人一覧・求人詳細の画面イメージ">
+              <div class="app-screen job-screen">
+                <div class="screen-topbar"><strong>求人</strong><span>職種</span><span>勤務地</span></div>
+                <div class="job-columns">
+                  <div class="job-list">
+                    <p class="is-active"><b>SaaS営業</b><small>東京 / 500-700万</small></p>
+                    <p><b>CS企画</b><small>東京 / 450-650万</small></p>
+                    <p><b>事業開発</b><small>大阪 / 600-800万</small></p>
+                  </div>
+                  <div class="job-detail">
+                    <strong>SaaS営業</strong>
+                    <dl>
+                      <div><dt>必須条件</dt><dd>法人営業3年以上、SaaS経験</dd></div>
+                      <div><dt>歓迎条件</dt><dd>CS連携、営業企画経験</dd></div>
+                      <div><dt>魅力</dt><dd>裁量のある提案活動、リモート併用</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-row">
+            <div class="feature-copy">
+              <h3><span>CRM / CSVデータを取り込み、</span>項目を整理</h3>
+              <p>CRMやCSVにある候補者・求人データを取り込み、項目のズレや表記ゆれを整えることで、提案業務に使えるデータへ変換します。</p>
+            </div>
+            <div class="screen-card" aria-label="データ取込・マッピング画面の画面イメージ">
+              <div class="app-screen import-screen">
+                <div class="screen-topbar"><strong>データ取込</strong><span>CSV</span><span>CRM</span></div>
+                <div class="mapping-flow">
+                  <div>
+                    <b>取込データ</b>
+                    <p>希望勤務地</p>
+                    <p>経験職種</p>
+                    <p>年収希望</p>
+                  </div>
+                  <div class="mapping-arrow">整理</div>
+                  <div>
+                    <b>omJob match項目</b>
+                    <p>勤務地</p>
+                    <p>経験スキル</p>
+                    <p>希望年収</p>
+                  </div>
+                </div>
+                <div class="normalize-bar"><span></span><strong>表記ゆれを確認中</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-row feature-row-reverse">
+            <div class="feature-copy">
+              <h3><span>提案前の確認作業を</span>スムーズに</h3>
+              <p>整理された候補者情報と求人情報を確認しながら、提案理由や確認ポイントを把握しやすくします。</p>
+            </div>
+            <div class="screen-card" aria-label="提案準備画面の画面イメージ">
+              <div class="app-screen proposal-screen">
+                <div class="screen-topbar"><strong>提案準備</strong><span>理由</span><span>確認</span></div>
+                <div class="proposal-grid">
+                  <div><b>候補者</b><p>希望条件・経験・温度感を整理済み</p></div>
+                  <div><b>求人</b><p>要件・魅力・注意点を整理済み</p></div>
+                  <div class="proposal-reason"><b>提案理由</b><p>営業経験とSaaS志向が一致。裁量ある環境を重視する希望にも合う。</p></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta" id="cta" aria-labelledby="cta-title">
+        <div class="cta-copy">
+          <p class="eyebrow">Next Step</p>
+          <h2 id="cta-title" class="cta-title-line"><span class="title-line">CAが求職者と向き合う時間を、</span><span class="title-line">組織で増やす。</span></h2>
+          <p>
+            サービス資料のダウンロード、または導入や現場定着についての相談をご希望の方は、以下からお問い合わせください。
+          </p>
+        </div>
+        <form class="lead-form" data-lead-form>
+          <fieldset class="intent-field">
+            <legend>ご希望の内容</legend>
+            <label>
+              <input type="radio" name="intent" value="download" checked>
+              <span>
+                <strong>サービス資料</strong>
+                <small>まずは内容を確認する</small>
+              </span>
+            </label>
+            <label>
+              <input type="radio" name="intent" value="consult">
+              <span>
+                <strong>相談してみる</strong>
+                <small>導入や連携について話す</small>
+              </span>
+            </label>
+          </fieldset>
+          <label>
+            会社名
+            <input name="company" type="text" autocomplete="organization" required>
+          </label>
+          <label>
+            お名前
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            メールアドレス
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <button class="button button-primary" type="submit">送信内容を確認</button>
+          <p class="form-message" role="status" aria-live="polite" data-form-message></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="logo-link" href="#top" aria-label="omJob match トップへ">
+        <img src="/assets/omjob-logo.png" alt="omJob match" width="136" height="86">
+      </a>
+      <p>© 2026 omJob match</p>
+    </footer>
+
+    <script is:inline src="/script.js"></script>
+  </body>
+</html>
