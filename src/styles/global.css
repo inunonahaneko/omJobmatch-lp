@@ -2401,9 +2401,21 @@ h1 {
 
 .hero-rive-face,
   .hero-face-effect {
-    top: -22%;
-    left: -12%;
-    width: min(46vw, 220px);
+    top: -42%;
+    left: 0;
+    width: min(54vw, 220px);
+  }
+
+  .hero-face-effect {
+    --face-cycle: 14s;
+  }
+
+  .face-spread {
+    stroke: rgba(0, 56, 229, 0.42);
+  }
+
+  .face-smile-line {
+    stroke: rgba(255, 255, 255, 0.86);
   }
 
   .mock-body {

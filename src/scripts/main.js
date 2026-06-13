@@ -38,7 +38,10 @@ const setupRiveFace = async () => {
     return;
   }
 
-  const src = "/assets/omjob-face.riv";
+  const basePath = import.meta.env.BASE_URL.endsWith("/")
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
+  const src = `${basePath}assets/omjob-face.riv`;
   const response = await fetch(src, { method: "HEAD" });
 
   if (!response.ok) {
