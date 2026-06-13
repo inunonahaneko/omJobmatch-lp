@@ -1,5 +1,9 @@
 ---
 import "../styles/global.css";
+
+const basePath = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <!doctype html>
@@ -22,7 +26,7 @@ import "../styles/global.css";
   <body>
     <header class="site-header" data-header>
       <a class="logo-link" href="#top" aria-label="omJob match トップへ">
-        <img src={`${import.meta.env.BASE_URL}assets/omjob-logo.png`} alt="omJob match" width="168" height="106">
+        <img src={`${basePath}assets/omjob-logo.png`} alt="omJob match" width="168" height="106">
       </a>
       <nav class="desktop-nav" aria-label="主要ナビゲーション">
         <a href="#problem">課題</a>
@@ -307,7 +311,7 @@ import "../styles/global.css";
 
     <footer class="site-footer">
       <a class="logo-link" href="#top" aria-label="omJob match トップへ">
-        <img src={`${import.meta.env.BASE_URL}assets/omjob-logo.png`} alt="omJob match" width="168" height="106">
+        <img src={`${basePath}assets/omjob-logo.png`} alt="omJob match" width="168" height="106">
       </a>
       <p>© 2026 omJob match</p>
     </footer>
