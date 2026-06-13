@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
+    "@rive-app/canvas": "^2.38.0",
     "astro": "^6.4.6",
+    "lenis": "^1.3.23",
+    "motion": "^12.40.0",
     "typescript": "^6.0.3"
   },
   "devDependencies": {

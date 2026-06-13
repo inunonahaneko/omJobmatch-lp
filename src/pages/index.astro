@@ -13,7 +13,7 @@ import "../styles/global.css";
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     >
-    <title>omJob match | 探す時間を減らし、向き合う時間を増やす。</title>
+    <title>omJob match | 候補者に合う求人を、もっと速く、もっと確かに。</title>
     <meta
       name="description"
       content="omJob matchは、CRMに蓄積された候補者・求人データを整理し、CAの求人提案業務を支援するAIエージェントです。"
@@ -50,9 +50,9 @@ import "../styles/global.css";
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">CAの求人提案業務を支援するAIエージェント</p>
-          <h1><span class="headline-line">探す時間を減らし、</span><span class="headline-line">向き合う時間を増やす。</span></h1>
+          <h1><span class="headline-line">候補者に合う求人を、</span><span class="headline-line">もっと速く、</span><span class="headline-line">もっと確かに。</span></h1>
           <p class="hero-lead">
-            omJob matchは、CRMに蓄積された候補者・求人データを整理し、CAが迷わず求人提案に進める状態をつくるAIエージェントです。提案準備の属人化を減らし、組織として提案品質を高めます。
+            OmJob Matchは、CRMに蓄積された候補者情報・求人情報を整理し、CAが提案準備に迷わず、根拠ある求人提案に進める状態をつくるAIエージェントです。
           </p>
           <div class="hero-actions">
             <a class="button button-download" href="#cta" data-intent-link="download">資料ダウンロード</a>
@@ -61,6 +61,21 @@ import "../styles/global.css";
         </div>
 
         <div class="video-shell" aria-label="omJob match デモ動画プレースホルダー">
+          <canvas class="hero-rive-face" width="640" height="640" data-rive-face aria-hidden="true"></canvas>
+          <div class="hero-face-effect" aria-hidden="true">
+            <svg viewBox="0 0 620 620">
+              <defs>
+                <radialGradient id="hero-face-gradient" cx="42%" cy="38%" r="68%">
+                  <stop offset="0%" stop-color="#5c86ff" stop-opacity="0.18"></stop>
+                  <stop offset="58%" stop-color="#0038e5" stop-opacity="0.11"></stop>
+                  <stop offset="100%" stop-color="#0038e5" stop-opacity="0.04"></stop>
+                </radialGradient>
+              </defs>
+              <circle class="face-fill" cx="310" cy="310" r="300"></circle>
+              <circle class="face-spread" cx="310" cy="310" r="300"></circle>
+              <path class="face-smile-line" d="M172 318c52 108 224 108 276 0"></path>
+            </svg>
+          </div>
           <div class="video-frame">
             <div class="product-mock">
               <div class="mock-topbar">
@@ -72,9 +87,9 @@ import "../styles/global.css";
               <div class="mock-body">
                 <aside class="mock-sidebar">
                   <div class="mock-chip active">データ整理</div>
-                  <div class="mock-chip">候補者</div>
-                  <div class="mock-chip">求人</div>
-                  <div class="mock-chip">提案メモ</div>
+                  <div class="mock-chip">候補者要約</div>
+                  <div class="mock-chip">求人比較</div>
+                  <div class="mock-chip">提案理由</div>
                 </aside>
                 <div class="mock-flow">
                   <div class="mock-source candidate">
@@ -88,11 +103,11 @@ import "../styles/global.css";
                   <div class="mock-arrow">整理</div>
                   <div class="mock-result">
                     <span>omJob match</span>
-                    <strong>提案に使える形へ整理</strong>
+                    <strong>提案根拠を整理</strong>
                     <ul>
                       <li>候補者情報を要約</li>
                       <li>求人情報を比較</li>
-                      <li>提案理由を準備</li>
+                      <li>推薦理由を生成</li>
                     </ul>
                   </div>
                   <div class="mock-ready">
@@ -106,27 +121,27 @@ import "../styles/global.css";
               <span></span>
             </button>
           </div>
-          <p class="video-caption" data-demo-status>CRM/CSVデータを整理し、候補者情報・求人情報を提案に使える状態へ整えます。</p>
+          <p class="video-caption" data-demo-status>CRM/CSVデータを整理し、候補者情報・求人情報・提案理由をひとつの流れで確認できます。</p>
         </div>
       </section>
 
       <section class="section problem" id="problem" aria-labelledby="problem-title">
         <div class="section-heading">
           <p class="eyebrow">Problem</p>
-          <h2 id="problem-title">求職者に向き合う時間が、<span class="accent-text">提案準備に奪われて</span>いませんか？</h2>
+          <h2 id="problem-title">求人提案の準備が、<span class="heading-accent">CAごとの経験に頼りきり</span>になっていませんか？</h2>
         </div>
         <div class="problem-grid">
           <article>
-            <h3>候補者の情報を探すのに時間がかかる</h3>
+            <h3>候補者情報を探すだけで時間がかかる</h3>
             <p>面談メモや希望条件が分かれていて、提案前の確認に手間がかかる。</p>
           </article>
           <article>
-            <h3>合う求人を探す力が、人によって変わる</h3>
-            <p>担当CAの経験や記憶に頼るため、提案品質にばらつきが出やすくなる。</p>
+            <h3>求人選びがCAの経験に頼りやすい</h3>
+            <p>担当CAの経験や記憶に頼りやすく、提案内容にばらつきが出やすい。</p>
           </article>
           <article>
-            <h3>うまくいく提案方法を共有しにくい</h3>
-            <p>選定理由や進め方が見えづらく、新人CAの育成や業務改善につなげにくい。</p>
+            <h3>提案理由をチームで共有しにくい</h3>
+            <p>なぜその求人を選んだのかが見えづらく、新人育成や業務改善につなげにくい。</p>
           </article>
         </div>
       </section>
@@ -134,16 +149,16 @@ import "../styles/global.css";
       <section class="section features" id="features" aria-labelledby="features-title">
         <div class="section-heading">
           <p class="eyebrow">Features</p>
-          <h2 id="features-title">omJob matchでできること</h2>
+          <h2 id="features-title">求人提案に必要な情報を、<span class="heading-accent">提案に使える状態</span>へ。</h2>
           <p>
-            omJob matchは、候補者情報と求人情報を整理し、CAが提案に進みやすい状態をつくります。
+            候補者情報を整理し、求人情報を確認し、提案理由まで一貫して見られる流れをつくります。
           </p>
         </div>
         <div class="feature-showcase">
           <article class="feature-row">
             <div class="feature-copy">
               <h3>候補者情報を、<span>提案に使いやすく</span>整理</h3>
-              <p>面談メモ、希望条件、経験スキルなどをまとめて確認できるため、候補者理解に必要な情報を探しやすくなります。</p>
+              <p>必要な情報をひと目で確認でき、候補者理解にかかる時間を減らします。</p>
             </div>
             <div class="screen-card" aria-label="候補者一覧・候補者詳細の画面イメージ">
               <div class="app-screen candidate-screen">
@@ -175,7 +190,7 @@ import "../styles/global.css";
           <article class="feature-row feature-row-reverse">
             <div class="feature-copy">
               <h3>求人情報を、<span>比較しやすい形</span>で確認</h3>
-              <p>職種、勤務地、必須条件、歓迎条件などの求人情報を整理し、候補者に合う求人を検討しやすくします。</p>
+              <p>職種、条件、魅力を整理し、候補者に合う求人を検討しやすくします。</p>
             </div>
             <div class="screen-card" aria-label="求人一覧・求人詳細の画面イメージ">
               <div class="app-screen job-screen">
@@ -202,7 +217,7 @@ import "../styles/global.css";
           <article class="feature-row">
             <div class="feature-copy">
               <h3><span>CRM / CSVデータを取り込み、</span>項目を整理</h3>
-              <p>CRMやCSVにある候補者・求人データを取り込み、項目のズレや表記ゆれを整えることで、提案業務に使えるデータへ変換します。</p>
+              <p>バラバラな項目や表記ゆれを整え、提案業務に使えるデータへ変換します。</p>
             </div>
             <div class="screen-card" aria-label="データ取込・マッピング画面の画面イメージ">
               <div class="app-screen import-screen">
@@ -230,7 +245,7 @@ import "../styles/global.css";
           <article class="feature-row feature-row-reverse">
             <div class="feature-copy">
               <h3><span>提案前の確認作業を</span>スムーズに</h3>
-              <p>整理された候補者情報と求人情報を確認しながら、提案理由や確認ポイントを把握しやすくします。</p>
+              <p>提案理由や確認ポイントを整理し、提案前の不安や抜け漏れを減らします。</p>
             </div>
             <div class="screen-card" aria-label="提案準備画面の画面イメージ">
               <div class="app-screen proposal-screen">
@@ -249,9 +264,9 @@ import "../styles/global.css";
       <section class="final-cta" id="cta" aria-labelledby="cta-title">
         <div class="cta-copy">
           <p class="eyebrow">Next Step</p>
-          <h2 id="cta-title" class="cta-title-line"><span class="title-line">CAが求職者と向き合う時間を、</span><span class="title-line">組織で増やす。</span></h2>
+          <h2 id="cta-title" class="cta-title-line"><span class="title-line">CAが迷わず提案に進める状態を、</span><span class="title-line">組織でつくる。</span></h2>
           <p>
-            サービス資料のダウンロード、または導入や現場定着についての相談をご希望の方は、以下からお問い合わせください。
+            サービス資料のダウンロード、または導入や活用イメージのご相談は、以下からお問い合わせください。
           </p>
         </div>
         <form class="lead-form" data-lead-form>
@@ -297,6 +312,6 @@ import "../styles/global.css";
       <p>© 2026 omJob match</p>
     </footer>
 
-    <script is:inline src="/script.js"></script>
+    <script src="../scripts/main.js"></script>
   </body>
 </html>
