@@ -1,9 +1,6 @@
 import { defineConfig } from "astro/config";
 
-export default defineConfig({});
-import { defineConfig } from "astro/config";
-
 export default defineConfig({
-  site: "https://inunonanahenko.github.io",
+  site: "https://inunonahaneko.github.io",
   base: "/omJobmatch-lp",
 });
