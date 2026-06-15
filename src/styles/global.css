@@ -1708,13 +1708,29 @@ h1 {
 
 .visual-number {
   position: absolute;
-  top: -18px;
-  left: 18px;
-  color: rgba(255, 255, 255, 0.18);
+  top: 18px;
+  left: 20px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 5px 10px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 999px;
   font-family: var(--font-body);
-  font-size: clamp(74px, 7vw, 112px);
+  font-size: 13px;
   font-weight: 900;
   line-height: 1;
+}
+
+.visual-number::before {
+  color: rgba(255, 255, 255, 0.74);
+  content: "STEP";
+  font-size: 10px;
+  letter-spacing: 0.04em;
 }
 
 .flow-visual {
