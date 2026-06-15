@@ -106,7 +106,7 @@ if (!reduceMotion) {
 
 if (!reduceMotion) {
   const revealItems = document.querySelectorAll(
-    ".section-heading > .eyebrow, .section-heading > p:not(.eyebrow), .cta-copy > .eyebrow, .cta-copy > p, .feature-row, .lead-form",
+    ".section-heading > .eyebrow, .section-heading > p:not(.eyebrow), .cta-copy > .eyebrow, .cta-copy > p, .feature-row, .outcome-grid article, .mid-cta, .lead-form",
   );
   const revealHeadings = document.querySelectorAll(".reveal-heading");
 
