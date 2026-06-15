@@ -342,6 +342,10 @@ h3 {
   display: none;
 }
 
+.mobile-hero-face-effect {
+  display: none;
+}
+
 .hero .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -2665,6 +2669,15 @@ h1 {
     padding: 42px 16px 38px;
   }
 
+  .hero-copy {
+    isolation: isolate;
+  }
+
+  .hero-copy > :not(.mobile-hero-face-effect) {
+    position: relative;
+    z-index: 1;
+  }
+
   h1 {
     font-size: min(38px, 8.5vw);
   }
@@ -2700,14 +2713,35 @@ h1 {
     aspect-ratio: 16 / 10;
   }
 
-.hero-rive-face,
-  .hero-face-effect {
-    top: -42%;
-    left: 0;
-    width: min(54vw, 220px);
+  .hero-rive-face,
+  .hero .video-shell > .hero-face-effect {
+    display: none;
   }
 
-  .hero-face-effect {
+  .mobile-hero-face-effect {
+    position: absolute;
+    top: clamp(230px, 67vw, 304px);
+    right: -46px;
+    z-index: 0;
+    display: block;
+    width: min(44vw, 168px);
+    aspect-ratio: 1;
+    opacity: 0.86;
+    pointer-events: none;
+  }
+
+  .mobile-hero-face-effect svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .mobile-hero-face-effect .face-fill {
+    fill: url("#mobile-hero-face-gradient");
+  }
+
+  .mobile-hero-face-effect {
     --face-cycle: 14s;
   }
 
