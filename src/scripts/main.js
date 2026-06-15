@@ -106,7 +106,7 @@ if (!reduceMotion) {
 
 if (!reduceMotion) {
   const revealItems = document.querySelectorAll(
-    ".section-heading, .problem-grid article, .feature-row, .final-cta .cta-copy, .lead-form",
+    ".section-heading, .feature-row, .final-cta .cta-copy, .lead-form",
   );
   const revealHeadings = document.querySelectorAll(".reveal-heading > span");
 
