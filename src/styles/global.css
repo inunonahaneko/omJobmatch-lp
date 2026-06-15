@@ -10,7 +10,7 @@
   --accent-soft: #edf6ff;
   --ink: #172033;
   --text: #334155;
-  --muted: #667085;
+  --muted: #4a5568;
   --line: #d8e1ef;
   --paper: #ffffff;
   --warm: #fff8ec;
@@ -359,7 +359,7 @@ h3 {
 }
 
 .eyebrow {
-  margin: 0 0 12px;
+  margin: 0 0 18px;
   color: var(--brand);
   font-family: var(--font-body);
   font-size: 12px;
@@ -370,8 +370,8 @@ h3 {
 h1 {
   margin: 0;
   max-width: 760px;
-  font-size: clamp(36px, 2.8vw, 44px);
-  line-height: 1.12;
+  font-size: clamp(42px, 4.5vw, 58px);
+  line-height: 1.08;
   letter-spacing: 0.01em;
   text-wrap: balance;
 }
@@ -1003,6 +1003,63 @@ h1 {
   text-shadow: none;
 }
 
+.impact-strip {
+  padding: clamp(52px, 7vw, 88px) clamp(18px, 6vw, 84px);
+  background: var(--ink);
+  text-align: center;
+}
+
+.impact-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  align-items: center;
+  gap: 0;
+}
+
+.impact-stat-item {
+  padding: clamp(16px, 2.5vw, 32px) clamp(24px, 3.5vw, 52px);
+}
+
+.impact-stat-item p {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: clamp(12px, 0.9vw, 14px);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.impact-divider {
+  width: 1px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.stat-big {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(44px, 5.5vw, 80px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.stat-big small {
+  font-size: 0.48em;
+  font-weight: 800;
+}
+
+.stat-note {
+  display: inline-block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.36);
+  font-size: 11px;
+}
+
 .section {
   padding: clamp(70px, 10vw, 116px) clamp(18px, 6vw, 84px);
 }
@@ -1015,7 +1072,7 @@ h1 {
 .solution-copy h2,
 .cta-copy h2 {
   margin: 0;
-  font-size: clamp(30px, 4vw, 48px);
+  font-size: clamp(26px, 3vw, 42px);
   line-height: 1.28;
   letter-spacing: 0.01em;
   text-wrap: balance;
@@ -1033,7 +1090,7 @@ h1 {
 .solution-copy p,
 .cta-copy p {
   max-width: 760px;
-  margin: 18px 0 0;
+  margin: 22px 0 0;
   color: var(--text);
   font-size: 17px;
   font-weight: 400;
@@ -1108,12 +1165,12 @@ h1 {
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  font-size: clamp(30px, 2.75vw, 42px);
+  font-size: clamp(26px, 2.5vw, 38px);
   color: rgba(255, 255, 255, 0.96);
 }
 
 .problem .eyebrow {
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .problem .heading-accent {
@@ -1140,7 +1197,7 @@ h1 {
   z-index: 1;
   gap: 22px;
   max-width: 1180px;
-  margin: 44px auto 0;
+  margin: 56px auto 0;
 }
 
 .problem-grid article,
@@ -1319,7 +1376,7 @@ h1 {
 }
 
 .features .section-heading h2 {
-  font-size: clamp(32px, 3.5vw, 50px);
+  font-size: clamp(26px, 3vw, 42px);
   line-height: 1.18;
   white-space: nowrap;
 }
@@ -1610,7 +1667,7 @@ h1 {
   max-width: 1040px;
   margin-right: auto;
   margin-left: auto;
-  font-size: clamp(32px, 3.25vw, 48px);
+  font-size: clamp(26px, 3vw, 42px);
 }
 
 .outcomes .section-heading p:not(.eyebrow) {
@@ -1624,7 +1681,7 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   max-width: 1180px;
-  margin: 52px auto 0;
+  margin: 64px auto 0;
 }
 
 .outcome-grid::before {
@@ -1639,43 +1696,34 @@ h1 {
 
 .outcome-grid article {
   position: relative;
-  min-height: 390px;
-  padding: 0 0 30px;
+  min-height: auto;
+  padding: 36px 32px 40px;
   overflow: hidden;
-  background:
-    linear-gradient(180deg, #ffffff, rgba(248, 251, 255, 0.98)),
-    linear-gradient(90deg, rgba(0, 56, 229, 0.024) 1px, transparent 1px) 0 0 / 34px 34px;
-  border: 1px solid rgba(186, 208, 238, 0.96);
-  border-top: 0;
-  border-radius: 10px;
-  box-shadow: 0 22px 50px rgba(15, 35, 68, 0.08);
+  background: linear-gradient(145deg, #0f1f3d 0%, #0a1628 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  box-shadow:
+    0 32px 64px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .outcome-visual {
-  position: relative;
-  display: grid;
-  place-items: center;
-  min-height: 170px;
-  padding: 28px 24px;
-  overflow: hidden;
-  color: #fff;
-  background:
-    radial-gradient(circle at 72% 24%, rgba(255, 255, 255, 0.18), transparent 26%),
-    linear-gradient(135deg, #0038e5 0%, #0a39c8 100%);
+  display: none;
 }
 
 .visual-number {
   position: absolute;
-  right: 8px;
-  bottom: 8px;
+  top: -10px;
+  right: 16px;
   z-index: 0;
-  color: rgba(190, 224, 255, 0.22);
+  color: rgba(255, 255, 255, 0.06);
   font-family: var(--font-body);
-  font-size: clamp(120px, 10vw, 158px);
+  font-size: clamp(100px, 11vw, 160px);
   font-weight: 900;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   pointer-events: none;
+  user-select: none;
 }
 
 .visual-number::before {
@@ -1683,140 +1731,67 @@ h1 {
 }
 
 .flow-visual {
-  grid-template-columns: auto 34px auto 34px auto;
-  gap: 0;
+  display: flex;
 }
 
-.flow-chip {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  min-width: 72px;
-  min-height: 42px;
-  padding: 8px 12px;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 900;
-}
-
+.flow-chip,
 .flow-line {
-  position: relative;
-  z-index: 1;
-  width: 34px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.72);
+  display: none;
 }
 
+.flow-chip,
+.flow-line,
 .flow-line::after {
-  position: absolute;
-  top: 50%;
-  right: -1px;
-  width: 7px;
-  height: 7px;
-  content: "";
-  border-top: 2px solid rgba(255, 255, 255, 0.72);
-  border-right: 2px solid rgba(255, 255, 255, 0.72);
-  transform: translateY(-50%) rotate(45deg);
+  display: none;
 }
 
 .checklist-visual {
-  align-content: center;
-  gap: 10px;
-}
-
-.checklist-visual div {
-  position: relative;
-  z-index: 1;
   display: flex;
-  align-items: center;
-  gap: 10px;
-  width: min(100%, 220px);
-  min-height: 38px;
-  padding: 9px 14px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 900;
 }
 
-.checklist-visual div span {
-  width: 18px;
-  height: 18px;
-  border: 2px solid #8ee7f0;
-  border-radius: 50%;
-}
-
-.checklist-visual div span::after {
-  display: block;
-  width: 8px;
-  height: 5px;
-  margin: 4px auto 0;
-  content: "";
-  border-bottom: 2px solid #8ee7f0;
-  border-left: 2px solid #8ee7f0;
-  transform: rotate(-45deg);
+.checklist-visual > div {
+  display: none;
 }
 
 .board-visual {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  align-content: center;
+  display: flex;
 }
 
-.board-visual div {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  min-height: 46px;
-  padding: 10px;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.board-visual div:first-of-type {
-  grid-column: 1 / -1;
-  min-height: 52px;
+.board-visual > div {
+  display: none;
 }
 
 .outcome-label {
   display: inline-flex;
   align-items: center;
-  min-height: 30px;
-  margin: 26px 28px 0;
-  padding: 6px 12px;
-  color: var(--brand-dark);
-  background: rgba(0, 56, 229, 0.08);
-  border: 1px solid rgba(0, 56, 229, 0.16);
+  min-height: 26px;
+  margin: 0 0 20px;
+  padding: 4px 12px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
-  font-size: 13px;
-  font-weight: 800;
+  font-size: 12px;
+  font-weight: 700;
   line-height: 1;
+  letter-spacing: 0.04em;
 }
 
 .outcome-grid h3 {
-  margin: 18px 28px 0;
-  color: var(--ink);
-  font-size: clamp(22px, 1.8vw, 27px);
-  line-height: 1.42;
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 900;
+  line-height: 1.32;
   letter-spacing: 0.01em;
 }
 
 .outcome-grid p {
-  margin: 16px 28px 0;
-  color: var(--text);
-  font-size: 15.5px;
-  font-weight: 500;
-  line-height: 1.9;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.8;
 }
 
 .screen-topbar {
@@ -2364,7 +2339,7 @@ h1 {
 
 .cta-title-line {
   max-width: 980px;
-  font-size: clamp(32px, 3.65vw, 52px);
+  font-size: clamp(28px, 3.2vw, 44px);
   line-height: 1.25;
 }
 
