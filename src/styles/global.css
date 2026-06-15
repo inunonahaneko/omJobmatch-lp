@@ -1551,11 +1551,22 @@ h1 {
 }
 
 .outcome-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   max-width: 1180px;
   margin: 52px auto 0;
+}
+
+.outcome-grid::before {
+  position: absolute;
+  top: 70px;
+  right: 15%;
+  left: 15%;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, rgba(0, 56, 229, 0), rgba(0, 56, 229, 0.26), rgba(0, 56, 229, 0));
 }
 
 .outcome-grid article {
@@ -1564,12 +1575,28 @@ h1 {
   padding: 30px 28px 32px;
   overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(250, 253, 255, 0.98)),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.99), rgba(244, 248, 255, 0.98)),
     linear-gradient(90deg, rgba(0, 56, 229, 0.028) 1px, transparent 1px) 0 0 / 34px 34px;
   border: 1px solid rgba(186, 208, 238, 0.96);
-  border-top: 4px solid var(--brand);
+  border-top: 0;
   border-radius: 10px;
   box-shadow: 0 22px 50px rgba(15, 35, 68, 0.08);
+}
+
+.outcome-grid article::before {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+  width: 34px;
+  height: 34px;
+  content: "";
+  background:
+    linear-gradient(135deg, transparent 45%, #ffffff 45% 55%, transparent 55%),
+    linear-gradient(45deg, transparent 50%, #ffffff 50% 62%, transparent 62%) 11px 8px / 12px 12px no-repeat,
+    var(--brand);
+  border-radius: 50%;
+  box-shadow: 0 12px 24px rgba(0, 56, 229, 0.16);
 }
 
 .outcome-grid article::after {
@@ -1583,7 +1610,7 @@ h1 {
   border-radius: 50%;
 }
 
-.outcome-grid span {
+.outcome-number {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1593,7 +1620,7 @@ h1 {
   line-height: 1;
 }
 
-.outcome-grid span::after {
+.outcome-number::after {
   width: 46px;
   height: 2px;
   content: "";
@@ -1601,8 +1628,23 @@ h1 {
   border-radius: 999px;
 }
 
+.outcome-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  margin: 16px 0 0;
+  padding: 6px 12px;
+  color: var(--brand-dark);
+  background: rgba(0, 56, 229, 0.08);
+  border: 1px solid rgba(0, 56, 229, 0.16);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+}
+
 .outcome-grid h3 {
-  margin: 24px 0 0;
+  margin: 22px 0 0;
   color: var(--ink);
   font-size: clamp(22px, 1.8vw, 27px);
   line-height: 1.42;
@@ -2488,6 +2530,10 @@ h1 {
 
   .outcome-grid {
     grid-template-columns: 1fr;
+  }
+
+  .outcome-grid::before {
+    display: none;
   }
 
   .mid-cta {
