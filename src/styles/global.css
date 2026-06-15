@@ -1057,12 +1057,12 @@ h1 {
 .problem::before {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   z-index: -1;
-  height: 1px;
+  height: 58px;
   content: "";
-  background: linear-gradient(90deg, transparent, rgba(0, 56, 229, 0.16), transparent);
+  background: linear-gradient(180deg, rgba(238, 243, 255, 0), #eef3ff 72%, #f4f7ff 100%);
 }
 
 .problem::after {
