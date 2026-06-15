@@ -155,6 +155,14 @@ if (!reduceMotion) {
     },
     { margin: "0px 0px -16% 0px" },
   );
+
+  inView(
+    ".outcomes",
+    (section) => {
+      section.classList.add("is-face-active");
+    },
+    { margin: "0px 0px -20% 0px" },
+  );
 }
 
 const createIrisCurtain = () => {

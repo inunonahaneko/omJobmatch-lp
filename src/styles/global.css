@@ -1567,7 +1567,6 @@ h1 {
   transform: scale(1);
   transform-origin: 310px 310px;
   transform-box: view-box;
-  animation: hero-face-fill var(--face-cycle) cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .outcome-face-spread {
@@ -1580,7 +1579,6 @@ h1 {
   opacity: 1;
   transform-origin: 310px 310px;
   transform-box: view-box;
-  animation: hero-face-spread var(--face-cycle) ease-in-out infinite;
 }
 
 .outcome-face-smile {
@@ -1593,6 +1591,17 @@ h1 {
   opacity: 0;
   transform-box: view-box;
   transform-origin: 310px 310px;
+}
+
+.outcomes.is-face-active .outcome-face-fill {
+  animation: hero-face-fill var(--face-cycle) cubic-bezier(0.42, 0, 0.2, 1) infinite;
+}
+
+.outcomes.is-face-active .outcome-face-spread {
+  animation: hero-face-spread var(--face-cycle) ease-in-out infinite;
+}
+
+.outcomes.is-face-active .outcome-face-smile {
   animation: hero-smile-cycle var(--face-cycle) ease-in-out infinite;
 }
 
