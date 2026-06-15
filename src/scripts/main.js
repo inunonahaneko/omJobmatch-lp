@@ -106,9 +106,9 @@ if (!reduceMotion) {
 
 if (!reduceMotion) {
   const revealItems = document.querySelectorAll(
-    ".section-heading, .feature-row, .final-cta .cta-copy, .lead-form",
+    ".section-heading > .eyebrow, .section-heading > p:not(.eyebrow), .cta-copy > .eyebrow, .cta-copy > p, .feature-row, .lead-form",
   );
-  const revealHeadings = document.querySelectorAll(".reveal-heading > span");
+  const revealHeadings = document.querySelectorAll(".reveal-heading");
 
   revealItems.forEach((item) => {
     item.style.opacity = "0";
@@ -116,8 +116,14 @@ if (!reduceMotion) {
   });
 
   revealHeadings.forEach((heading) => {
-    heading.style.opacity = "0";
-    heading.style.transform = "translateY(108%)";
+    const inner = heading.querySelector(":scope > span");
+
+    if (!inner) {
+      return;
+    }
+
+    inner.style.opacity = "0";
+    inner.style.transform = "translateY(108%)";
   });
 
   inView(
@@ -135,8 +141,14 @@ if (!reduceMotion) {
   inView(
     revealHeadings,
     (heading) => {
+      const inner = heading.querySelector(":scope > span");
+
+      if (!inner) {
+        return;
+      }
+
       animate(
-        heading,
+        inner,
         { opacity: 1, transform: "translateY(0%)" },
         { duration: 0.82, easing: [0.2, 0, 0.18, 1] },
       );
