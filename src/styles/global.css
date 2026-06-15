@@ -714,6 +714,10 @@ h1 {
     stroke-dashoffset: 0;
   }
 
+  .outcome-face-smile {
+    animation: none;
+  }
+
   .hero .video-shell::before {
     animation: none;
   }
@@ -1530,6 +1534,50 @@ h1 {
   border: 1px solid rgba(0, 56, 229, 0.06);
   border-radius: 24px;
   transform: rotate(8deg);
+}
+
+.outcome-face-effect {
+  position: absolute;
+  top: clamp(48px, 8vw, 110px);
+  right: clamp(-110px, -7vw, -42px);
+  z-index: -1;
+  width: clamp(220px, 26vw, 360px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  opacity: 0.78;
+  transform: rotate(-8deg);
+}
+
+.outcome-face-effect svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.outcome-face-fill {
+  fill: url("#outcome-face-gradient");
+}
+
+.outcome-face-smile {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.66);
+  stroke-width: 48;
+  stroke-linecap: round;
+  transform-box: view-box;
+  transform-origin: 310px 310px;
+  animation: outcome-smile-sway 12s ease-in-out infinite;
+}
+
+@keyframes outcome-smile-sway {
+  0%,
+  100% {
+    transform: rotate(-5deg) translateX(-8px);
+  }
+
+  50% {
+    transform: rotate(5deg) translateX(8px);
+  }
 }
 
 .outcomes .section-heading {
@@ -2518,6 +2566,13 @@ h1 {
 
   .outcome-grid::before {
     display: none;
+  }
+
+  .outcome-face-effect {
+    top: 38px;
+    right: -96px;
+    width: 230px;
+    opacity: 0.52;
   }
 
   .mid-cta {

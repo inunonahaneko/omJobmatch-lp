@@ -263,6 +263,19 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
       </section>
 
       <section class="section outcomes" aria-labelledby="outcomes-title">
+        <div class="outcome-face-effect" aria-hidden="true">
+          <svg viewBox="0 0 620 620">
+            <defs>
+              <radialGradient id="outcome-face-gradient" cx="42%" cy="38%" r="68%">
+                <stop offset="0%" stop-color="#5c86ff" stop-opacity="0.14"></stop>
+                <stop offset="58%" stop-color="#0038e5" stop-opacity="0.08"></stop>
+                <stop offset="100%" stop-color="#0038e5" stop-opacity="0.03"></stop>
+              </radialGradient>
+            </defs>
+            <circle class="outcome-face-fill" cx="310" cy="310" r="300"></circle>
+            <path class="outcome-face-smile" d="M172 318c52 108 224 108 276 0"></path>
+          </svg>
+        </div>
         <div class="section-heading">
           <p class="eyebrow">OmJob Matchで変わる、CAの求人提案業務。</p>
           <h2 id="outcomes-title" class="reveal-heading">
