@@ -2706,11 +2706,11 @@ h1 {
 
   .mobile-hero-face-effect {
     position: absolute;
-    top: clamp(230px, 67vw, 304px);
-    right: -46px;
+    top: clamp(196px, 47vw, 202px);
+    right: -34px;
     z-index: 0;
     display: block;
-    width: min(44vw, 168px);
+    width: min(28vw, 108px);
     aspect-ratio: 1;
     opacity: 0.86;
     pointer-events: none;
