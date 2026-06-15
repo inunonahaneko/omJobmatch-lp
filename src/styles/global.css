@@ -1066,13 +1066,13 @@ h1 {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-top: clamp(64px, 7vw, 96px);
-  padding-bottom: clamp(54px, 6vw, 82px);
+  padding-top: clamp(56px, 6vw, 84px);
+  padding-bottom: clamp(50px, 5.6vw, 76px);
   background:
     var(--texture-noise),
-    linear-gradient(90deg, rgba(0, 56, 229, 0.07) 1px, transparent 1px) 50% 0 / 48px 48px,
-    radial-gradient(circle at 18% 18%, rgba(0, 56, 229, 0.12), transparent 30%),
-    linear-gradient(180deg, #dfe9ff 0%, #e8f0ff 62%, #eef3ff 100%);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px) 50% 0 / 48px 48px,
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.16), transparent 30%),
+    linear-gradient(120deg, #0038e5 0%, #002cb2 100%);
   background-size: 180px 180px, 48px 48px, auto, auto;
   background-blend-mode: soft-light, normal, normal, normal;
 }
@@ -1085,7 +1085,7 @@ h1 {
   z-index: -1;
   height: 58px;
   content: "";
-  background: linear-gradient(180deg, rgba(238, 243, 255, 0), #eef3ff 72%, #f4f7ff 100%);
+  background: linear-gradient(180deg, rgba(0, 44, 178, 0), rgba(0, 44, 178, 0.28) 34%, #eef3ff 100%);
 }
 
 .problem::after {
@@ -1097,8 +1097,8 @@ h1 {
   height: 170px;
   content: "";
   background:
-    linear-gradient(90deg, rgba(0, 56, 229, 0.18) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(0, 56, 229, 0.12) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
   background-size: 18px 18px;
   border-radius: 10px;
   opacity: 0.5;
@@ -1115,7 +1115,16 @@ h1 {
   margin-right: auto;
   margin-left: auto;
   font-size: clamp(30px, 2.75vw, 42px);
-  color: #111827;
+  color: #fff;
+}
+
+.problem .eyebrow {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.problem .heading-accent {
+  color: #ffffff;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
 }
 
 .problem .section-heading p:not(.eyebrow) {
