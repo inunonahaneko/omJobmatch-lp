@@ -386,6 +386,15 @@ h1 {
   display: block;
 }
 
+.reveal-heading {
+  overflow: hidden;
+}
+
+.reveal-heading > span {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
 .hero-lead {
   max-width: 690px;
   margin: 24px 0 0;
@@ -676,6 +685,11 @@ h1 {
 
 @media (prefers-reduced-motion: reduce) {
   .headline-line span {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .reveal-heading > span {
     opacity: 1 !important;
     transform: none !important;
   }

@@ -108,10 +108,16 @@ if (!reduceMotion) {
   const revealItems = document.querySelectorAll(
     ".section-heading, .problem-grid article, .feature-row, .final-cta .cta-copy, .lead-form",
   );
+  const revealHeadings = document.querySelectorAll(".reveal-heading > span");
 
   revealItems.forEach((item) => {
     item.style.opacity = "0";
     item.style.transform = "translateY(28px)";
+  });
+
+  revealHeadings.forEach((heading) => {
+    heading.style.opacity = "0";
+    heading.style.transform = "translateY(108%)";
   });
 
   inView(
@@ -124,6 +130,18 @@ if (!reduceMotion) {
       );
     },
     { margin: "0px 0px -14% 0px" },
+  );
+
+  inView(
+    revealHeadings,
+    (heading) => {
+      animate(
+        heading,
+        { opacity: 1, transform: "translateY(0%)" },
+        { duration: 0.82, easing: [0.2, 0, 0.18, 1] },
+      );
+    },
+    { margin: "0px 0px -16% 0px" },
   );
 }
 
