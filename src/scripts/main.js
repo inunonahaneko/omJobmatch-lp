@@ -12,6 +12,7 @@ const formMessage = document.querySelector("[data-form-message]");
 const demoButton = document.querySelector("[data-demo-button]");
 const demoStatus = document.querySelector("[data-demo-status]");
 const riveFaceCanvas = document.querySelector("[data-rive-face]");
+const heroSection = document.querySelector(".hero");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const lenis = reduceMotion
   ? null
@@ -102,6 +103,25 @@ if (!reduceMotion) {
       easing: [0.2, 0, 0.18, 1],
     },
   );
+
+  if (heroSection) {
+    const heroObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          heroSection.classList.remove("is-face-active");
+          requestAnimationFrame(() => {
+            heroSection.classList.add("is-face-active");
+          });
+          return;
+        }
+
+        heroSection.classList.remove("is-face-active");
+      },
+      { threshold: 0.28 },
+    );
+
+    heroObserver.observe(heroSection);
+  }
 }
 
 if (!reduceMotion) {

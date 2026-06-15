@@ -483,7 +483,6 @@ h1 {
   pointer-events: none;
   --face-cycle: 22s;
   transform-origin: center;
-  animation: hero-face-group var(--face-cycle) ease-in-out infinite;
 }
 
 .hero-face-effect svg {
@@ -499,7 +498,6 @@ h1 {
   transform: scale(1);
   transform-origin: 310px 310px;
   transform-box: view-box;
-  animation: hero-face-fill var(--face-cycle) cubic-bezier(0.42, 0, 0.2, 1) infinite;
 }
 
 .face-spread {
@@ -512,7 +510,6 @@ h1 {
   opacity: 1;
   transform-origin: 310px 310px;
   transform-box: view-box;
-  animation: hero-face-spread var(--face-cycle) ease-in-out infinite;
 }
 
 .face-smile-line {
@@ -526,6 +523,22 @@ h1 {
   transform-origin: 310px 310px;
   transform: rotate(-4deg);
   transform-box: view-box;
+}
+
+.hero.is-face-active .hero-face-effect,
+.hero.is-face-active .mobile-hero-face-effect {
+  animation: hero-face-group var(--face-cycle) ease-in-out infinite;
+}
+
+.hero.is-face-active .face-fill {
+  animation: hero-face-fill var(--face-cycle) cubic-bezier(0.42, 0, 0.2, 1) infinite;
+}
+
+.hero.is-face-active .face-spread {
+  animation: hero-face-spread var(--face-cycle) ease-in-out infinite;
+}
+
+.hero.is-face-active .face-smile-line {
   animation: hero-smile-cycle var(--face-cycle) ease-in-out infinite;
 }
 
@@ -1070,11 +1083,11 @@ h1 {
   padding-bottom: clamp(50px, 5.6vw, 76px);
   background:
     var(--texture-noise),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px) 50% 0 / 48px 48px,
-    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.16), transparent 30%),
-    linear-gradient(120deg, #0038e5 0%, #002cb2 100%);
-  background-size: 180px 180px, 48px 48px, auto, auto;
-  background-blend-mode: soft-light, normal, normal, normal;
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px) 50% 0 / 56px 56px,
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.09), transparent 32%),
+    linear-gradient(120deg, #0a39c8 0%, #082783 100%);
+  background-size: 180px 180px, 56px 56px, auto, auto;
+  background-blend-mode: soft-light, soft-light, normal, normal;
 }
 
 .problem::before {
@@ -1085,7 +1098,7 @@ h1 {
   z-index: -1;
   height: 58px;
   content: "";
-  background: linear-gradient(180deg, rgba(0, 44, 178, 0), rgba(0, 44, 178, 0.28) 34%, #eef3ff 100%);
+  background: linear-gradient(180deg, rgba(8, 39, 131, 0), rgba(8, 39, 131, 0.18) 38%, #eef3ff 100%);
 }
 
 .problem::after {
@@ -1097,11 +1110,11 @@ h1 {
   height: 170px;
   content: "";
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-  background-size: 18px 18px;
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
   border-radius: 10px;
-  opacity: 0.5;
+  opacity: 0.32;
 }
 
 .problem .section-heading {
@@ -1115,11 +1128,11 @@ h1 {
   margin-right: auto;
   margin-left: auto;
   font-size: clamp(30px, 2.75vw, 42px);
-  color: #fff;
+  color: rgba(255, 255, 255, 0.96);
 }
 
 .problem .eyebrow {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .problem .heading-accent {
