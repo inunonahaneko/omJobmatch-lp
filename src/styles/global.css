@@ -2610,9 +2610,9 @@ h1 {
 
   .outcome-face-effect {
     top: 38px;
-    right: -72px;
-    width: 230px;
-    opacity: 0.52;
+    right: -18px;
+    width: 210px;
+    opacity: 0.58;
   }
 
   .mid-cta {
@@ -2756,11 +2756,11 @@ h1 {
 
   .mobile-hero-face-effect {
     position: absolute;
-    top: clamp(196px, 47vw, 202px);
-    right: -34px;
+    top: clamp(172px, 41vw, 180px);
+    right: -42px;
     z-index: 0;
     display: block;
-    width: min(28vw, 108px);
+    width: min(34vw, 132px);
     aspect-ratio: 1;
     opacity: 0.86;
     pointer-events: none;
