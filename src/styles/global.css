@@ -1671,17 +1671,6 @@ h1 {
   box-shadow: 0 22px 50px rgba(15, 35, 68, 0.08);
 }
 
-.outcome-grid article::after {
-  position: absolute;
-  right: -34px;
-  bottom: -44px;
-  width: 130px;
-  height: 130px;
-  content: "";
-  background: radial-gradient(circle, rgba(0, 56, 229, 0.1), transparent 68%);
-  border-radius: 50%;
-}
-
 .outcome-visual {
   position: relative;
   display: grid;
@@ -1695,21 +1684,10 @@ h1 {
     linear-gradient(135deg, #0038e5 0%, #0a39c8 100%);
 }
 
-.outcome-visual::after {
-  position: absolute;
-  right: -34px;
-  bottom: -56px;
-  width: 150px;
-  height: 150px;
-  content: "";
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-}
-
 .visual-number {
   position: absolute;
-  right: -12px;
-  bottom: -34px;
+  right: 8px;
+  bottom: 8px;
   z-index: 0;
   color: rgba(190, 224, 255, 0.22);
   font-family: var(--font-body);
