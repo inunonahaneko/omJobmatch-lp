@@ -105,6 +105,8 @@ if (!reduceMotion) {
   );
 
   if (heroSection) {
+    heroSection.classList.add("is-face-active");
+
     const heroObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -117,7 +119,7 @@ if (!reduceMotion) {
 
         heroSection.classList.remove("is-face-active");
       },
-      { threshold: 0.28 },
+      { rootMargin: "0px 0px -18% 0px", threshold: 0.08 },
     );
 
     heroObserver.observe(heroSection);
@@ -181,7 +183,7 @@ if (!reduceMotion) {
     (section) => {
       section.classList.add("is-face-active");
     },
-    { margin: "0px 0px -20% 0px" },
+    { margin: "0px 0px -34% 0px" },
   );
 }
 

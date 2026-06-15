@@ -1593,8 +1593,8 @@ h1 {
 
 .outcome-face-smile {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.68);
-  stroke-width: 48;
+  stroke: rgba(255, 255, 255, 0.92);
+  stroke-width: 56;
   stroke-linecap: round;
   stroke-dasharray: 380;
   stroke-dashoffset: 0;
@@ -2756,11 +2756,11 @@ h1 {
 
   .mobile-hero-face-effect {
     position: absolute;
-    top: clamp(172px, 41vw, 180px);
-    right: -42px;
+    top: clamp(146px, 35vw, 156px);
+    right: -52px;
     z-index: 0;
     display: block;
-    width: min(34vw, 132px);
+    width: min(40vw, 154px);
     aspect-ratio: 1;
     opacity: 0.86;
     pointer-events: none;
