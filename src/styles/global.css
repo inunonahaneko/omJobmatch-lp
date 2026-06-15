@@ -373,7 +373,13 @@ h1 {
 
 .headline-line {
   display: block;
+  overflow: hidden;
   white-space: nowrap;
+}
+
+.headline-line span {
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 .title-line {
@@ -669,6 +675,11 @@ h1 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .headline-line span {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .face-spread,
   .face-fill,
   .face-smile-line {

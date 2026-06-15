@@ -1,4 +1,4 @@
-import { animate, inView } from "motion";
+import { animate, inView, stagger } from "motion";
 import { Alignment, Fit, Layout, Rive } from "@rive-app/canvas";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
@@ -66,6 +66,43 @@ const setupRiveFace = async () => {
 setupRiveFace().catch(() => {
   // Keep the CSS fallback face if the Rive asset is not available.
 });
+
+const heroRevealTargets = [
+  ...document.querySelectorAll(".hero .eyebrow, .hero-lead, .hero-actions, .hero .video-shell"),
+];
+const heroHeadlineLines = document.querySelectorAll(".headline-line span");
+
+if (!reduceMotion) {
+  heroHeadlineLines.forEach((line) => {
+    line.style.opacity = "0";
+    line.style.transform = "translateY(112%)";
+  });
+
+  heroRevealTargets.forEach((item) => {
+    item.style.opacity = "0";
+    item.style.transform = "translateY(18px)";
+  });
+
+  animate(
+    heroHeadlineLines,
+    { opacity: 1, transform: "translateY(0%)" },
+    {
+      duration: 0.86,
+      delay: stagger(0.1, { start: 0.12 }),
+      easing: [0.2, 0, 0.18, 1],
+    },
+  );
+
+  animate(
+    heroRevealTargets,
+    { opacity: 1, transform: "translateY(0px)" },
+    {
+      duration: 0.74,
+      delay: stagger(0.08, { start: 0.42 }),
+      easing: [0.2, 0, 0.18, 1],
+    },
+  );
+}
 
 if (!reduceMotion) {
   const revealItems = document.querySelectorAll(
