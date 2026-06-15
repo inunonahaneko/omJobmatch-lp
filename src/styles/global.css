@@ -1708,8 +1708,8 @@ h1 {
 
 .visual-number {
   position: absolute;
-  top: -22px;
-  left: 16px;
+  right: -12px;
+  bottom: -34px;
   z-index: 0;
   color: rgba(190, 224, 255, 0.22);
   font-family: var(--font-body);
