@@ -17,10 +17,10 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     >
-    <title>omJob match | 候補者に合う求人を、もっと速く、もっと確かに。</title>
+    <title>omJob match | 求人探しに追われる時間を、求職者と向き合う時間へ。</title>
     <meta
       name="description"
-      content="omJob matchは、CRMに蓄積された候補者・求人データを整理し、CAの求人提案業務を支援するAIエージェントです。"
+      content="OmJob Matchは、CRM・CSVに散らばった候補者情報と求人情報を整理し、候補者ごとの求人候補と提案理由を確認できる状態にするCA向けAIエージェントです。"
     >
   </head>
   <body>
@@ -33,7 +33,7 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
         <a href="#features">できること</a>
       </nav>
       <div class="header-actions">
-        <a class="button button-download" href="#cta" data-intent-link="download">資料ダウンロード</a>
+        <a class="button button-download" href="#cta" data-intent-link="download">サービス資料を受け取る</a>
         <a class="button button-consult" href="#cta" data-intent-link="consult">相談してみる</a>
       </div>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
@@ -46,21 +46,20 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
     <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション" data-mobile-nav>
       <a href="#problem">課題</a>
       <a href="#features">できること</a>
-      <a href="#cta" data-intent-link="download">サービス資料をダウンロード</a>
+      <a href="#cta" data-intent-link="download">サービス資料を受け取る</a>
       <a href="#cta" data-intent-link="consult">相談してみる</a>
     </nav>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">CAの求人提案業務を支援するAIエージェント</p>
+          <p class="eyebrow">人材紹介会社のCA向けAIエージェント</p>
           <h1>
-            <span class="headline-line"><span>候補者に合う求人を、</span></span>
-            <span class="headline-line"><span>もっと速く、</span></span>
-            <span class="headline-line"><span>もっと確かに。</span></span>
+            <span class="headline-line"><span>求人探しに追われる時間を、</span></span>
+            <span class="headline-line"><span>求職者と向き合う時間へ。</span></span>
           </h1>
           <p class="hero-lead">
-            OmJob Matchは、CRMに蓄積された候補者情報・求人情報を整理し、CAが提案準備に迷わず、根拠ある求人提案に進める状態をつくるAIエージェントです。
+            OmJob Matchは、CRM・CSVに散らばった候補者情報と求人情報を整理し、候補者ごとの求人候補と提案理由を確認できる状態にする、CA向けAIエージェントです。
           </p>
           <div class="mobile-hero-face-effect" aria-hidden="true">
             <svg viewBox="0 0 620 620">
@@ -77,12 +76,12 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
             </svg>
           </div>
           <div class="hero-actions">
-            <a class="button button-download" href="#cta" data-intent-link="download">資料ダウンロード</a>
-            <a class="button button-demo" href="#top">60秒デモを見る</a>
+            <a class="button button-download" href="#cta" data-intent-link="download">サービス資料を受け取る</a>
+            <a class="button button-demo" href="#features">画面イメージを見る</a>
           </div>
         </div>
 
-        <div class="video-shell" aria-label="omJob match デモ動画プレースホルダー">
+        <div class="video-shell" aria-label="OmJob Match 画面イメージ">
           <canvas class="hero-rive-face" width="640" height="640" data-rive-face aria-hidden="true"></canvas>
           <div class="hero-face-effect" aria-hidden="true">
             <svg viewBox="0 0 620 620">
@@ -104,7 +103,7 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
                 <span></span>
                 <span></span>
                 <span></span>
-                <strong>omJob match デモ</strong>
+                <strong>OmJob Match 画面イメージ</strong>
               </div>
               <div class="mock-body">
                 <aside class="mock-sidebar">
@@ -139,9 +138,6 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
                 </div>
               </div>
             </div>
-            <button class="play-button" type="button" aria-label="デモ動画を再生" data-demo-button>
-              <span></span>
-            </button>
           </div>
           <p class="video-caption" data-demo-status>CRM/CSVデータを整理し、候補者情報・求人情報・提案理由をひとつの流れで確認できます。</p>
         </div>
@@ -152,10 +148,24 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
           <p class="eyebrow">Problem</p>
           <h2 id="problem-title" class="reveal-heading">
             <span>
-              <span class="title-line">求人提案の準備が、</span>
-              <span class="title-line"><span class="heading-accent">CAの経験や記憶</span>に頼りきりになっていませんか？</span>
+              <span class="title-line">“もっと合う求人があったかも”を、</span>
+              <span class="title-line">CAひとりの記憶に残さない。</span>
             </span>
           </h2>
+        </div>
+        <div class="problem-grid" aria-label="求人提案業務で起きやすい課題">
+          <article>
+            <h3>候補者情報が<span>散らばる</span></h3>
+            <p>CRM、CSV、面談メモに情報が分かれ、希望条件や温度感を探し直す時間が増えやすくなります。</p>
+          </article>
+          <article>
+            <h3>求人比較が<span>属人化する</span></h3>
+            <p>求人の要件や魅力の見方がCAごとに分かれ、候補者に合う求人候補を揃えにくくなります。</p>
+          </article>
+          <article>
+            <h3>提案理由が<span>チームに残りにくい</span></h3>
+            <p>なぜその求人を選んだのかが個人のメモや記憶に閉じ、振り返りや育成に活かしにくくなります。</p>
+          </article>
         </div>
       </section>
 
@@ -343,8 +353,8 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
           <p class="eyebrow">Next Step</p>
           <h2 id="cta-title" class="cta-title-line reveal-heading">
             <span>
-              <span class="title-line">CAが迷わず提案に進める状態を、</span>
-              <span class="title-line">組織でつくる。</span>
+              <span class="title-line">候補者に向き合う時間を増やす、</span>
+              <span class="title-line">提案業務のつくり方を資料で見る。</span>
             </span>
           </h2>
           <p>

@@ -9,8 +9,6 @@ const mobileNav = document.querySelector("[data-mobile-nav]");
 const intentLinks = document.querySelectorAll("[data-intent-link]");
 const leadForm = document.querySelector("[data-lead-form]");
 const formMessage = document.querySelector("[data-form-message]");
-const demoButton = document.querySelector("[data-demo-button]");
-const demoStatus = document.querySelector("[data-demo-status]");
 const riveFaceCanvas = document.querySelector("[data-rive-face]");
 const heroSection = document.querySelector(".hero");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -295,12 +293,6 @@ intentLinks.forEach((link) => {
   });
 });
 
-if (demoButton && demoStatus) {
-  demoButton.addEventListener("click", () => {
-    demoStatus.textContent = "プロダクトデモ動画は現在準備中です。";
-  });
-}
-
 if (leadForm && formMessage) {
   leadForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -316,7 +308,7 @@ if (leadForm && formMessage) {
       return;
     }
 
-    const action = intent === "consult" ? "相談希望" : "資料ダウンロード希望";
+    const action = intent === "consult" ? "相談希望" : "サービス資料受け取り希望";
     formMessage.textContent = `${action}の入力内容を確認しました。送信先を設定すると受付できます。`;
   });
 }
