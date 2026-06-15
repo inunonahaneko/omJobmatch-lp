@@ -1583,22 +1583,6 @@ h1 {
   box-shadow: 0 22px 50px rgba(15, 35, 68, 0.08);
 }
 
-.outcome-grid article::before {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  z-index: 1;
-  width: 34px;
-  height: 34px;
-  content: "";
-  background:
-    linear-gradient(135deg, transparent 45%, #ffffff 45% 55%, transparent 55%),
-    linear-gradient(45deg, transparent 50%, #ffffff 50% 62%, transparent 62%) 11px 8px / 12px 12px no-repeat,
-    var(--brand);
-  border-radius: 50%;
-  box-shadow: 0 12px 24px rgba(0, 56, 229, 0.16);
-}
-
 .outcome-grid article::after {
   position: absolute;
   right: -34px;
