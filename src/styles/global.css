@@ -2851,8 +2851,6 @@ h1 {
   }
 
   .hero-copy {
-    display: flex;
-    flex-direction: column;
     isolation: isolate;
   }
 
@@ -2901,13 +2899,10 @@ h1 {
 
   .hero-actions {
     display: grid;
-    order: -1;
-    margin-top: 0;
-    margin-bottom: 26px;
-  }
-
-  .hero-actions .button-demo {
-    order: -1;
+    position: relative;
+    z-index: 6;
+    margin-top: 28px;
+    margin-bottom: 24px;
   }
 
   .hero-points div {
@@ -2916,6 +2911,10 @@ h1 {
 
   .video-frame {
     aspect-ratio: 16 / 10;
+  }
+
+  .hero .video-shell {
+    margin-top: 8px;
   }
 
   .hero-rive-face,
