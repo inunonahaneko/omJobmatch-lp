@@ -17,7 +17,7 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     >
-    <title>omJob match | 求人探しに追われる時間を、求職者と向き合う時間へ。</title>
+    <title>omJob match | CAの求人選定を、10分で提案できる状態へ。</title>
     <meta
       name="description"
       content="OmJob Matchは、CRM・CSVに散らばった候補者情報と求人情報を整理し、候補者ごとの求人候補と提案理由を確認できる状態にするCA向けAIエージェントです。"
@@ -55,8 +55,9 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
         <div class="hero-copy">
           <p class="eyebrow">人材紹介会社のCA向けAIエージェント</p>
           <h1>
-            <span class="headline-line"><span>求人探しに追われる時間を、</span></span>
-            <span class="headline-line"><span>求職者と向き合う時間へ。</span></span>
+            <span class="headline-line"><span>CAの求人選定を、</span></span>
+            <span class="headline-line"><span>10分で提案できる</span></span>
+            <span class="headline-line"><span>状態へ。</span></span>
           </h1>
           <p class="hero-lead">
             OmJob Matchは、CRM・CSVに散らばった候補者情報と求人情報を整理し、候補者ごとの求人候補と提案理由を確認できる状態にする、CA向けAIエージェントです。
@@ -76,12 +77,12 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
             </svg>
           </div>
           <div class="hero-actions">
-            <a class="button button-download" href="#cta" data-intent-link="download">サービス資料を受け取る</a>
-            <a class="button button-demo" href="#features">画面イメージを見る</a>
+            <a class="button button-download" href="#cta" data-intent-link="consult">相談してみる</a>
+            <a class="button button-demo" href="#cta" data-intent-link="download">サービス資料を受け取る</a>
           </div>
         </div>
 
-        <div class="video-shell" aria-label="OmJob Match 画面イメージ">
+        <div class="video-shell" id="demo" aria-label="OmJob Match 画面イメージ">
           <canvas class="hero-rive-face" width="640" height="640" data-rive-face aria-hidden="true"></canvas>
           <div class="hero-face-effect" aria-hidden="true">
             <svg viewBox="0 0 620 620">
@@ -98,7 +99,19 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
             </svg>
           </div>
           <div class="video-frame">
-            <div class="product-mock">
+            <video
+              class="hero-demo-video"
+              data-demo-video
+              data-src={`${basePath}assets/omjob-demo.mp4`}
+              data-poster={`${basePath}assets/omjob-demo-poster.jpg`}
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="OmJob Match デモ動画"
+            ></video>
+            <div class="product-mock" data-demo-fallback>
               <div class="mock-topbar">
                 <span></span>
                 <span></span>
@@ -138,6 +151,11 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
                 </div>
               </div>
             </div>
+          </div>
+          <div class="demo-play-overlay" aria-hidden="true">
+            <span class="demo-play-btn">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M10 7l14 7-14 7V7z" fill="currentColor"/></svg>
+            </span>
           </div>
           <p class="video-caption" data-demo-status>CRM/CSVデータを整理し、候補者情報・求人情報・提案理由をひとつの流れで確認できます。</p>
         </div>
@@ -202,8 +220,9 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
         </div>
         <div class="feature-showcase">
           <article class="feature-row">
+            <div class="feature-step" aria-hidden="true">01</div>
             <div class="feature-copy">
-              <h3>候補者情報を、<span>提案に使いやすく</span>整理</h3>
+              <h3>候補者情報を、<br><span>提案前に確認しやすく</span>整理</h3>
               <p>必要な情報をひと目で確認でき、候補者理解にかかる時間を減らします。</p>
             </div>
             <div class="screen-card" aria-label="候補者一覧・候補者詳細の画面イメージ">
@@ -234,8 +253,9 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
           </article>
 
           <article class="feature-row feature-row-reverse">
+            <div class="feature-step" aria-hidden="true">02</div>
             <div class="feature-copy">
-              <h3>求人情報を、<span>比較しやすい形</span>で確認</h3>
+              <h3>求人情報を、<br><span>条件ごとに見比べやすく</span>確認</h3>
               <p>職種、条件、魅力を整理し、候補者に合う求人を検討しやすくします。</p>
             </div>
             <div class="screen-card" aria-label="求人一覧・求人詳細の画面イメージ">
@@ -261,8 +281,9 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
           </article>
 
           <article class="feature-row">
+            <div class="feature-step" aria-hidden="true">03</div>
             <div class="feature-copy">
-              <h3><span>CRM / CSVデータを取り込み、</span>項目を整理</h3>
+              <h3 class="feature-heading-import"><span><span class="text-keep">CRM・CSVデータ</span>を取り込み、</span>活用できる状態へ</h3>
               <p>バラバラな項目や表記ゆれを整え、提案業務に使えるデータへ変換します。</p>
             </div>
             <div class="screen-card" aria-label="データ取込・マッピング画面の画面イメージ">
@@ -289,8 +310,9 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
           </article>
 
           <article class="feature-row feature-row-reverse">
+            <div class="feature-step" aria-hidden="true">04</div>
             <div class="feature-copy">
-              <h3><span>提案前の確認作業を</span>スムーズに</h3>
+              <h3 class="feature-heading-check"><span class="text-keep text-ink">取込・確認作業を、</span><span>迷わず進められる</span>状態へ</h3>
               <p>提案理由や確認ポイントを整理し、提案前の不安や抜け漏れを減らします。</p>
             </div>
             <div class="screen-card" aria-label="提案準備画面の画面イメージ">
@@ -305,67 +327,10 @@ const basePath = import.meta.env.BASE_URL.endsWith("/")
             </div>
           </article>
         </div>
-      </section>
-
-      <section class="section outcomes" aria-labelledby="outcomes-title">
-        <div class="outcome-face-effect" aria-hidden="true">
-          <svg viewBox="0 0 620 620">
-            <defs>
-              <radialGradient id="outcome-face-gradient" cx="42%" cy="38%" r="68%">
-                <stop offset="0%" stop-color="#5c86ff" stop-opacity="0.14"></stop>
-                <stop offset="58%" stop-color="#0038e5" stop-opacity="0.08"></stop>
-                <stop offset="100%" stop-color="#0038e5" stop-opacity="0.03"></stop>
-              </radialGradient>
-            </defs>
-            <circle class="outcome-face-fill" cx="310" cy="310" r="300"></circle>
-            <path class="outcome-face-smile" d="M172 318c52 108 224 108 276 0"></path>
-          </svg>
-        </div>
-        <div class="section-heading">
-          <p class="eyebrow">OmJob Matchで変わる、CAの求人提案業務。</p>
-          <h2 id="outcomes-title" class="reveal-heading">
-            <span>求人提案の準備が、<span class="heading-accent">チームで再現できる業務</span>へ。</span>
-          </h2>
-          <p>
-            候補者情報と求人情報が整理されることで、CAが迷わず提案準備に進みやすくなり、組織として提案品質を高めやすくなります。
-          </p>
-        </div>
-        <div class="outcome-grid" aria-label="OmJob Matchで変わる、CAの求人提案業務。">
-          <article>
-            <div class="outcome-visual flow-visual" aria-hidden="true">
-              <span class="visual-number">01</span>
-              <div class="flow-chip">候補者</div>
-              <div class="flow-line"></div>
-              <div class="flow-chip">求人</div>
-              <div class="flow-line"></div>
-              <div class="flow-chip">提案理由</div>
-            </div>
-            <span class="outcome-label">流れが揃う</span>
-            <h3>提案準備の流れが見えるようになる</h3>
-            <p>候補者情報、求人情報、提案理由が一つの流れで整理され、誰が見ても提案準備の状態を把握しやすくなります。</p>
-          </article>
-          <article>
-            <div class="outcome-visual checklist-visual" aria-hidden="true">
-              <span class="visual-number">02</span>
-              <div><span></span>希望条件</div>
-              <div><span></span>求人要件</div>
-              <div><span></span>提案理由</div>
-            </div>
-            <span class="outcome-label">自信を持てる</span>
-            <h3>CAごとのばらつきを減らしやすくなる</h3>
-            <p>経験や記憶だけに頼らず、確認すべき情報や提案理由を揃えやすくなります。</p>
-          </article>
-          <article>
-            <div class="outcome-visual board-visual" aria-hidden="true">
-              <span class="visual-number">03</span>
-              <div>提案メモ</div>
-              <div>振り返り</div>
-              <div>改善</div>
-            </div>
-            <span class="outcome-label">型が残る</span>
-            <h3>新人育成や業務改善につなげやすくなる</h3>
-            <p>どの情報を見て、なぜその求人を選んだのかが残るため、提案の振り返りや育成に活用しやすくなります。</p>
-          </article>
+        <div class="features-outcome">
+          <p class="eyebrow">提案準備の標準化</p>
+          <h2 class="reveal-heading"><span>求人提案の準備を、<br><span class="heading-accent">もっと速く、もっと確かに。</span></span></h2>
+          <p>候補者情報と求人情報がひと目で確認しやすくなり、CAが求人選定から提案準備まで、スムーズに進められる状態をつくります。</p>
         </div>
       </section>
 

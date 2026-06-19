@@ -10,6 +10,8 @@ const intentLinks = document.querySelectorAll("[data-intent-link]");
 const leadForm = document.querySelector("[data-lead-form]");
 const formMessage = document.querySelector("[data-form-message]");
 const riveFaceCanvas = document.querySelector("[data-rive-face]");
+const demoVideo = document.querySelector("[data-demo-video]");
+const demoStatus = document.querySelector("[data-demo-status]");
 const heroSection = document.querySelector(".hero");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const lenis = reduceMotion
@@ -64,6 +66,45 @@ const setupRiveFace = async () => {
 
 setupRiveFace().catch(() => {
   // Keep the CSS fallback face if the Rive asset is not available.
+});
+
+const setupDemoVideo = async () => {
+  if (!demoVideo) {
+    return;
+  }
+
+  const src = demoVideo.dataset.src;
+
+  if (!src) {
+    return;
+  }
+
+  const response = await fetch(src, { method: "HEAD" });
+
+  if (!response.ok) {
+    return;
+  }
+
+  const poster = demoVideo.dataset.poster;
+
+  if (poster) {
+    const posterResponse = await fetch(poster, { method: "HEAD" });
+
+    if (posterResponse.ok) {
+      demoVideo.setAttribute("poster", poster);
+    }
+  }
+
+  demoVideo.setAttribute("src", src);
+  demoVideo.closest(".video-frame")?.classList.add("has-demo-video");
+
+  if (demoStatus) {
+    demoStatus.textContent = "実際の操作イメージをデモ動画で確認できます。";
+  }
+};
+
+setupDemoVideo().catch(() => {
+  // Keep the product mock visible if the demo video is not available.
 });
 
 const heroRevealTargets = [
